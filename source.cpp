@@ -9,3 +9,12 @@
  *	e. umiesc rozwiazane na utworzonym przez ciebi git repo - podpunkty a,b zrob na branchu b1 a pozsotale na branchu b2
  *
  */
+#include "car.h"
+
+int main()
+{
+	auto cars = Car::get_data_from_txt("data.txt");
+	auto result = Car::find_n_cars_with_highest_speed(20, cars);
+	Car::show_all_cars(result);
+	return 0;
+}
